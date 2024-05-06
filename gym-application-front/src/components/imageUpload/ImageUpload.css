@@ -1,0 +1,135 @@
+/* ImageUpload.css */
+
+.image-upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .upload-box {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    width: 600px;
+  }
+  
+  .preview-container {
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+  }
+  
+  .upload-preview {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .initial-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .upload-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-input {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  .upload-button {
+    background-color: #561cea;
+    color: #fff;
+    border: none;
+    padding: 50px 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #2a3979;
+  }
+  
+  .success-message,
+  .error-message {
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .success-message {
+    background-color: #28a745; /* Bootstrap success green */
+  }
+  
+  .error-message {
+    background-color: #dc3545; /* Bootstrap danger red */
+  }
+  
+  
+  
+  .description-input {
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and border are included in width */
+  }
+
+  
+  .cancel-button {
+    background-color: #ed3333; /* Use Bootstrap danger red for cancel button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px; /* Add margin to separate from other elements */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #d82b48; /* Darker shade on hover */
+  }
+  
+
+  /* Existing CSS */
+
+.submit-button {
+  background-color: #34d65f; /* Use Bootstrap danger red for submit button */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px; /* Add margin to separate from other elements */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 10px; 
+}
+
+.submit-button:hover {
+  background-color: #228d42; /* Darker shade on hover */
+}
+
