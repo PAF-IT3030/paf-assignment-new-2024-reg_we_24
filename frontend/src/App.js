@@ -8,7 +8,7 @@ import EditMealplan from "./pages/Mealplan/EditMealplan";
 import ViewMealplan from "./pages/Mealplan/ViewMealplan";
 import Home from "./pages/Home";
 
-function App() {
+
   return (
     <div className="App">
       <Router>
