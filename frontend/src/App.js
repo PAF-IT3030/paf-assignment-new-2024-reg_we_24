@@ -19,7 +19,6 @@ function App() {
           <Route exact path="/addmealplan" element={<AddMealplan />} />
           <Route exact path="/editmealplan/:id" element={<EditMealplan />} />
           <Route exact path="/viewmealplan/:id" element={<ViewMealplan />} />
-          {/* comment */}
         </Routes>
       </Router>
     </div>
