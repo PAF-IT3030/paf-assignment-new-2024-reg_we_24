@@ -1,0 +1,350 @@
+.post-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: #cdf2fa10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-image {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .uploaded-image {
+    max-width: 100%; /* Ensure the image stays within the container */
+    max-height: 100%; /* Allow the image to adjust its height within the container */
+    border-radius: 5px;
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+  }
+  
+  
+  .post-caption{
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5f5; /* Matte gray background color */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners to match the design */
+  
+  
+  }
+  
+  .post-description {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f5f5f57b; /* Matte gray background color */
+    padding: 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners to match the design */
+    font-style: bold;
+    font-size: large;
+
+  }
+  
+  .post-username {
+    font-weight: bold;
+    color: #333333;
+  }
+  
+  
+  .ellipsis {
+    cursor: pointer;
+    color: #333333;
+    font-size: 20px;
+  }
+  
+  .edit-mode-controls {
+    margin-top: 10px;
+  }
+  
+  .edit-mode-controls input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .edit-mode-controls button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4e0c5e;
+    color: #fff;
+  }
+  
+  .edit-mode-controls button:hover {
+    background-color: #390c44;
+  }
+  
+  .dropdown-item {
+    cursor: pointer;
+    padding: 8px;
+    color: #333333;
+    font-weight: normal;
+    font-size: 14px; /* Reduced font size */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5; /* Light gray background on hover */
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* 80% of modal width */
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+  /* Comments section */
+.comments-section {
+  margin-bottom: 20px;
+}
+
+/* Individual comment */
+.comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.comment-avatar {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  border-radius: 50%; /* Make it round */
+  margin-right: 10px;
+  overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.comment-avatar img {
+  width: 100%; /* Make the image fill the circle */
+  height: 100%; /* Make the image fill the circle */
+  object-fit: cover; /* Maintain aspect ratio without stretching */
+}
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.comment-actions button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #385185; /* Instagram blue color */
+}
+
+.comment-actions button:hover {
+  text-decoration: underline;
+}
+
+/* Add comment section */
+.add-comment {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.add-comment input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.add-comment button {
+  background-color: #3897f0; /* Instagram blue color */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #2684e6; /* Darker shade of Instagram blue */
+}
+
+
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  padding: 8px;
+  color: #333333;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+.uploaded-image {
+  max-width: 100%;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.post-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333333;
+  font-weight: bold;
+}
+
+.post-actions button:hover {
+  color: #4e0c5e;
+}
+
+.post-caption {
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #c1c6fc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.comments-toggle {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.comment-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333333;
+}
+
+.comment-actions button:hover {
+  color: #180c5e;
+}
+
+.add-comment {
+  margin-top: 10px;
+}
+
+.add-comment input[type="text"] {
+  width: calc(100% - 80px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-comment button {
+  width: 70px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #0d0c5e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-comment button:hover {
+  background-color: #361e7a;
+}
+
+.editebtn{
+  background-color: blue;
+  color: white;
+
+}
+
+.deletbtn{
+  background-color: red;
+  color: white;
+  margin-left: 10px;
+}
+
+.postcap{
+  font-size: 20px;
+  line-height: 1.8;
+  background-color: #c1c6fc;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  text-shadow: #333333;
+}
