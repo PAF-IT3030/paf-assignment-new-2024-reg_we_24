@@ -20,7 +20,7 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
+          {/* comment */}
           <Link className="btn btn-outline-light" to="/adduser">
             Workouts
           </Link>
