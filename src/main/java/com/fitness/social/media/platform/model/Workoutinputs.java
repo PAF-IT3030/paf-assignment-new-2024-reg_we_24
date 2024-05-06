@@ -2,7 +2,7 @@ package com.fitness.social.media.platform.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 public class Workoutinputs {
