@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddMealplan from "./pages/Mealplan/AddMealplan";
 import EditMealplan from "./pages/Mealplan/EditMealplan";
 import ViewMealplan from "./pages/Mealplan/ViewMealplan";
-// sumanapala
 import Home from "./pages/Home";
 
 function App() {
