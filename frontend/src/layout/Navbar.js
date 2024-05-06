@@ -20,12 +20,13 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          
+
           <Link className="btn btn-outline-light" to="/adduser">
             Workouts
           </Link>
           <Link className="btn btn-outline-light" to="/mealplans">
           Meel Plans
+          {/* comment */}
           </Link>
           <Link className="btn btn-outline-light" to="/adduser">
            Current workout
