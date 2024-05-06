@@ -92,13 +92,14 @@ export default function AddWorkout() {
                 </div>
                 <div className="form-group">
                   <label htmlFor="image" className="custom-label">
-                    Image URL
+                    Upload Image
                   </label>
                   <input
-                    type="text"
+                    type="file"
                     className="form-control custom-input"
                     id="image"
                     name="image"
+                    accept=".jpg, .jpeg, .png"
                     value={image}
                     onChange={onInputChange}
                   />
