@@ -1,5 +1,6 @@
 package com.fitness.social.media.platform.controller;
 
+import com.fitness.social.media.platform.exception.WorkoutFoundException;
 import com.fitness.social.media.platform.model.Workoutinputs;
 import com.fitness.social.media.platform.repository.WorkoutRepository;
 import org.springframework.beans.factory.annotation.Autowired;
