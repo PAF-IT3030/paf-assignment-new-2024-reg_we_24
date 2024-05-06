@@ -1,7 +1,7 @@
 package com.fitness.social.media.platform.controller;
 
 import com.fitness.social.media.platform.exception.WorkoutFoundException;
-import com.fitness.social.media.platform.model.Workoutinputs;
+import com.fitness.social.media.platform.model.Workout;
 import com.fitness.social.media.platform.repository.WorkoutRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,20 +17,20 @@ public class WorkoutController {
     private WorkoutRepository workoutRepository;
 
     @PostMapping("/workout")
-    Workoutinputs newWorkoutinputs(@RequestBody Workoutinputs newWorkoutinputs){return workoutRepository.save(newWorkoutinputs);
+    Workout newWorkout(@RequestBody Workout newWorkout){return workoutRepository.save(newWorkout);
     }
 
     @GetMapping("/workouts")
-    List<Workoutinputs>getAllWorkout(){return workoutRepository.findAll();}
+    List<Workout>getAllWorkout(){return workoutRepository.findAll();}
 
     @GetMapping("/workout/{id}")
-    Workoutinputs getWorkoutById(@PathVariable Long id) {
-        return WorkoutRepository.findById(id)
+    Workout getWorkoutById(@PathVariable Long id) {
+        return workoutRepository.findById(id)
                 .orElseThrow(() -> new WorkoutFoundException(id));
     }
     @PutMapping("/workout/{id}")
-    Workoutinputs updateWorkout(@RequestBody Workoutinputs newWorkout, @PathVariable Long id) {
-        return WorkoutRepository.findById(id)
+    Workout updateWorkout(@RequestBody Workout newWorkout, @PathVariable Long id) {
+        return workoutRepository.findById(id)
                 .map(Workout -> {
                     Workout.setMuscle(newWorkout.getMuscle());
                     Workout.setName(newWorkout.getName());
@@ -40,15 +40,15 @@ public class WorkoutController {
                     if (newWorkout.getImage() != null && !newWorkout.getImage().isEmpty()) {
                         Workout.setImage(newWorkout.getImage());
                     }
-                    return WorkoutRepository.save(Workout);
+                    return workoutRepository.save(Workout);
                 }).orElseThrow(() -> new WorkoutFoundException(id));
     }
     @DeleteMapping("/workout/{id}")
     String deleteWorkout(@PathVariable Long id) {
-        if (!WorkoutRepository.existsById(id)) {
+        if (!workoutRepository.existsById(id)) {
             throw new WorkoutFoundException(id);
         }
-        WorkoutRepository.deleteById(id);
+        workoutRepository.deleteById(id);
         return "Workout with id " + id + " has been deleted success.";
     }
 
