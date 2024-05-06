@@ -11,29 +11,9 @@ const WorkoutForm = () => {
     // Set workoutType to the selected template name
     setWorkoutType(template.name);
 
-    setWorkoutType(template.name);
     setDistance(template.distance || '');
     setDuration(template.duration || '');
     setDescription(template.description || '');
-
-    // Update other fields if they are provided in the template
-    if ('distance' in template) {
-      setDistance(template.distance);
-    } else {
-      setDistance('');
-    }
-
-    if ('duration' in template) {
-      setDuration(template.duration);
-    } else {
-      setDuration('');
-    }
-
-    if ('description' in template) {
-      setDescription(template.description);
-    } else {
-      setDescription('');
-    }
   };
 
   const handleSubmit = async (e) => {
@@ -41,7 +21,7 @@ const WorkoutForm = () => {
 
     try {
       const workoutData = { workoutType, distance, duration, description };
-      const response = await axios.post('http://localhost:8080/workouts', workoutData);
+      const response = await axios.post('http://localhost:8080/workout', workoutData);
       console.log('Workout submitted:', response.data);
 
       // Reset form fields after successful submission
