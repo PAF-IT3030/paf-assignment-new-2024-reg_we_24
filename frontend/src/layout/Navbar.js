@@ -25,8 +25,7 @@ export default function Navbar() {
             Workouts
           </Link>
           <Link className="btn btn-outline-light" to="/mealplans">
-          Meel Plans
-          {/* comment */}
+          Meal Plans
           </Link>
           <Link className="btn btn-outline-light" to="/adduser">
            Current workout
