@@ -15,6 +15,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          {/* cooment */}
           <Route exact path="/mealplans" element={<Mealplans />} />
           <Route exact path="/addmealplan" element={<AddMealplan />} />
           <Route exact path="/editmealplan/:id" element={<EditMealplan />} />
